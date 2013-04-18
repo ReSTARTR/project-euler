@@ -23,10 +23,16 @@ def find(x):
     return prime(x, set([]))
 
 
+def solve(x):
+    return max(find(x))
+
+
 if __name__ == '__main__':
     assert prime_min(2) == 2
     assert prime_min(3) == 3
     assert prime_min(10) == 2
     assert find(10) == set([2, 5])
-
     assert find(13195) == set([5, 7, 13, 29])
+    assert find(600851475143) == set([6857, 839, 1471, 71])
+
+    assert solve(600851475143) == 6857
