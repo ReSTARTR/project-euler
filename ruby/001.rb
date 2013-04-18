@@ -1,11 +1,7 @@
 
 def solve(n, divs)
     (0...n).reduce do |sum, i|
-        if divs.any?{|x| i>0 && i % x == 0}:
-            sum + i
-        else
-            sum
-        end
+        sum += divs.any?{|x| i % x == 0} ? i : 0
     end
 end
 
