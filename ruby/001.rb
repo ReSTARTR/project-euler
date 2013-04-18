@@ -1,9 +1,13 @@
 
 def solve(n, divs)
     (0...n).reduce do |sum, i|
-        sum += divs.any?{|x| i % x == 0} ? i : 0
+        if divs.any?{|x| i % x == 0}
+           sum += i
+        end
+        sum
     end
 end
+
 
 require 'test/unit'
 class TestSolve < Test::Unit::TestCase

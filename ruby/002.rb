@@ -3,10 +3,10 @@ class Fib
         @cache = {}
     end
 
-    def at(x, first=[1, 2])
-        if !@cache.include?(x)
-            if x < 2:
-                @cache[x] = first[x]
+    def at(x, head=[1, 2])
+        unless @cache.include?(x)
+            if x < head.length:
+                @cache[x] = head[x]
             else
                 @cache[x] = at(x - 1) + at(x - 2)
             end
@@ -18,14 +18,14 @@ end
 
 def solve(n, limit=4000000)
     fib = Fib.new
-    (0...n).reduce{|sum, i|
+    (0...n).reduce do |sum, i|
         v = fib.at(i)
-        if v < limit and v % 2 == 0
+        if v < limit && v % 2 == 0
             sum + v
         else
             sum
         end
-    }
+    end
 end
 
 
