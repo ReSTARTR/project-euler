@@ -5,7 +5,7 @@ class Fib
 
     def at(x, head=[1, 2])
         unless @cache.include?(x)
-            if x < head.length:
+            if x < head.length
                 @cache[x] = head[x]
             else
                 @cache[x] = at(x - 1) + at(x - 2)
