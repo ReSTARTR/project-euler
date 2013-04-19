@@ -15,15 +15,7 @@ end
 
 
 def primes(x)
-    nums = []
-    prime_factors(x).each do |y|
-        if y > 0
-            nums.push(y)
-        else
-            break
-        end
-    end
-    nums
+    prime_factors(x).each.to_a
 end
 
 
@@ -45,6 +37,6 @@ class TestSolve < Test::Unit::TestCase
     end
 
     def test_solve
-        #assert solve(600851475143) == 6857
+        assert solve(600851475143) == 6857
     end
 end
