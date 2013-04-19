@@ -10,3 +10,7 @@ Answers
 ----
 * [solutions](https://code.google.com/p/projecteuler-solutions/wiki/ProjectEulerSolutions)
 
+Environment
+----
+* Python 2.7.3
+* Ruby 1.9.3p327
